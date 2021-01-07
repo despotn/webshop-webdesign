@@ -78,6 +78,10 @@ nav {
 #searchbar:hover {
 	background-color:  #f0efeb;
 }
+.nav-search a {
+	text-decoration: none;
+	color: inherit;
+}
 .fa-shopping-cart {
 	border: 1px solid transparent;
 	padding: 10px;
@@ -98,7 +102,7 @@ nav {
 	background-color: #f0efeb;
 	border-radius: 50%;
 }
-.shop-img {
+.img-fluid {
 	height: auto;
 	max-width: 100%;
 }
@@ -184,15 +188,106 @@ nav {
 	font-weight: 700;
 
 }
+/*cart*/
+.wrapper {
+	display: flex;
+	flex-direction: column;
+}
+.bag {
+	padding: 10px;
+}
+.cart-heading {
+	display: block;
+	width: 100%;
+}
+.cart-heading h1 {
+	font-weight: 600;
+	font-size: 32px;
+	padding: 10px 0;
+	padding-left: 10px;
+}
+.cart-item {
+	display: flex;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	padding: 15px;
+	margin-bottom: 20px;
+}
+.product-img {
+	margin: 0 10px;
+}
+.product-details {
+	display: inherit;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-right: auto;
+}
+.product-details h3 {
+	font-weight: 600;
+}
+.product-price {
+	font-weight: 600;
+}
+.summary {
+	padding: 10px;
+}
+.summary h3 {
+	font-weight: 600;
+	padding-bottom: 10px;
+}
+.summary p {
+	padding-bottom: 10px;
+}
+.summary form {
+	padding-bottom: 10px;
+}
+.summary input {
+	padding: 5px 0;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	width: 75%;
+}
+.btn-promo-code {
+	text-decoration: none;
+	color: black;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 5px 10px;
+	float: right;
+}
+.total-price {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0;
+}
+.span-txt, .span-value {
+	font-weight: 600;
+}
+.checkout {
+	width: 100%;
+	text-align: center;
+	margin: 20px 0;
+}
+.btn-checkout {
+	display: block;
+	text-decoration: none;
+	background-color: black;
+	color: white;
+	padding: 18px 0;
+	width: 100%;
+	border-radius: 30px;
+}
+/*end of cart*/
 @media (min-width: 700px) {
 	.list {
 		display: flex;
 		margin: 0 auto;
 		align-items: center;
+		justify-content: center;
 	}
 	.list ul li {
 		display: inline;
-		margin: 0 5px 0;
+		margin: 0 10px 0;
 	}
 	.list ul li a {
 		text-decoration: none;
@@ -217,5 +312,33 @@ nav {
 		width: 33.33%;
 		height: 100%;
 		border: 2px solid #2B2B2B;
+	}
+}
+@media (min-width: 991px) {
+	.wrapper {
+		flex-direction: row;
+		padding: 0 100px;
+	}
+	.bag {
+		width: 60%;
+	}
+	.summary {
+		width: 38%;
+		padding: 10px 40px;
+		background-color: white;
+		height: fit-content;
+		border-radius: 15px;
+		margin-left: 2%;
+	}
+	.summary input {
+		border: 2px solid black;
+	}
+	.btn-promo-code {
+		border: 2px solid black;
+		font-weight: 600;
+		padding: 5px 15px;
+	}
+	.cart-heading h1 {
+		padding-left: 100px;
 	}
 }
